@@ -5,6 +5,7 @@ import { addDecorator } from "@storybook/react";
 import { withContexts } from "@storybook/addon-contexts/react";
 import { jsx, ThemeProvider } from "theme-ui"
 import theme from "../src/gatsby-plugin-theme-ui/index"
+import { contexts } from "./contexts";
 // Gatsby's Link overrides:
 // Gatsby Link calls the `enqueue` & `hovering` methods on the global variable ___loader.
 // This global object isn't set in storybook context, requiring you to override it to empty functions (no-op),
@@ -28,3 +29,5 @@ export const decorators = [
     <ThemeProvider theme={theme}>{unboundStoryFn()}</ThemeProvider>
   ),
 ]
+
+addDecorator(withContexts(contexts));

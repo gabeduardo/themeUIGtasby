@@ -1,8 +1,7 @@
-import { useThemeUI, useColorMode } from 'theme-ui'
 
+import theme from "../src/gatsby-plugin-theme-ui/index"
+import {  ThemeProvider } from "theme-ui"
 
-
-const [colorMode, setColorMode] = useColorMode()
 
 
 
@@ -14,8 +13,8 @@ export const contexts = [
     components: [ThemeProvider],
     params: [
       // an array of params contains a set of predefined `props` for `components`
-      { name: "Default Theme", props: { theme: setColorMode.light, default: true } },
-      { name: "Dark Theme", props: { theme: setColorMode.dark } }
+      { name: "Default Theme", props: { theme: theme, default: true } },
+   
     ],
     options: {
       deep: true, // pass the `props` deeply into all wrapping components
