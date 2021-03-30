@@ -14,7 +14,7 @@ export const Button =({children})=>(
 
   <button sx={{
     backgroundColor:'background',
-    color: 'tomato'
+    color: 'primary'
   }}>
     {children}
   </button>

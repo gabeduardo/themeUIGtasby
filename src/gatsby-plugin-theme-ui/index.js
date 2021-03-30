@@ -55,8 +55,8 @@ export const standard = {
     },
     colors: {
       text: '#000',
-      background: 'pink',
-      primary: '#07c',
+      background: 'black',
+      primary: 'beige',
       secondary: '#30c',
       muted: '#f6f6f6',
     },
