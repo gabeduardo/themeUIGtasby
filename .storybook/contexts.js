@@ -1,6 +1,7 @@
 
-import theme from "../src/gatsby-plugin-theme-ui/index"
+import theme, { segundo, standard } from "../src/gatsby-plugin-theme-ui/index"
 import {  ThemeProvider } from "theme-ui"
+
 
 
 
@@ -13,7 +14,8 @@ export const contexts = [
     components: [ThemeProvider],
     params: [
       // an array of params contains a set of predefined `props` for `components`
-      { name: "Default Theme", props: { theme: theme, default: true } },
+      { name: "Default Theme", props: { theme: standard, default: true } },
+      { name: "Segundo Theme", props: { theme: segundo } },
    
     ],
     options: {

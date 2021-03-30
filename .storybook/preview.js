@@ -4,7 +4,7 @@ import { action } from "@storybook/addon-actions"
 import { addDecorator } from "@storybook/react";
 import { withContexts } from "@storybook/addon-contexts/react";
 import { jsx, ThemeProvider } from "theme-ui"
-import theme from "../src/gatsby-plugin-theme-ui/index"
+
 import { contexts } from "./contexts";
 // Gatsby's Link overrides:
 // Gatsby Link calls the `enqueue` & `hovering` methods on the global variable ___loader.
@@ -24,10 +24,5 @@ window.___navigate = pathname => {
   action("NavigateTo:")(pathname)
 }
 
-export const decorators = [
-  (unboundStoryFn) => (
-    <ThemeProvider theme={theme}>{unboundStoryFn()}</ThemeProvider>
-  ),
-]
 
 addDecorator(withContexts(contexts));
